@@ -196,6 +196,7 @@ const Navbar = () => {
                     <div className={classes.drawerContainer}>
                         {getDefaultLinks()}
                         {conditionalOrderLink}
+                        {conditionalLink}
                     </div>
                </Drawer>
 

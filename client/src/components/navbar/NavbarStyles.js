@@ -44,6 +44,7 @@ export default makeStyles((theme) => ({
    },
    clickLink: {
       background: '#eaeae9',
+      margin: '10px 0'
    },
    showLinks: {
       height: '100%',
@@ -72,13 +73,13 @@ export default makeStyles((theme) => ({
         display: 'flex',
       },
       [theme.breakpoints.down('sm')]: {
-        padding: '0 8px',
+        padding: '0',
         fontSize: '16px',
         display: 'flex',
       },
       [theme.breakpoints.down('xs')]: {
         fontSize: '4vw',
-        padding: '25px 0',
+        margin: '25px 0',
         width: '100%',
         display: 'flex',
         textAlign: 'left',
