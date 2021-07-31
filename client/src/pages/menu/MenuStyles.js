@@ -8,7 +8,7 @@ export default makeStyles((theme)=> ({
    heroSection: {
         display: 'block',
         textAlign: 'center',
-        minHeight: '650px',
+        minHeight: '690px',
         [theme.breakpoints.up('md')] : {
             padding: '54px 100px 30px'
         },
