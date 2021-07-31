@@ -31,7 +31,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const setResponsiveness = () => {
-          return window.innerWidth < 700
+          return window.innerWidth < 600
             ? setMobile({mobileView: true})
             : setMobile( {mobileView: false});
         };
