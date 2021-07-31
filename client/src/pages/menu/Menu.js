@@ -1,6 +1,6 @@
 import { Container, Grid } from '@material-ui/core'
 import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import useStyles from './MenuStyles'
 import { Croffle } from './CroffleData'
@@ -27,6 +27,16 @@ const Menu = () => {
 
     const { croffleIsClicked, waffleIsClicked } = state
 
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrBanner(currBanner => currBanner + (currBanner > 0 ? -1 : 1));
+        }, 3500);
+        return () => { 
+            clearInterval(timer);
+        };
+    }, []); 
+    
+
     const clickCroffle = () => {
         setState({croffleIsClicked: !croffleIsClicked})
         setCurrCroffle(0)
@@ -42,9 +52,7 @@ const Menu = () => {
     return(
         <Container className={classes.container} maxWidth={false}>
             <Grid xs={12} className={classes.heroSection}>
-            <div className={`${classes.left}`} onClick={() => {currBanner > 0 && setCurrBanner(currBanner - 1)}}><ArrowBackIos/></div>
                  <img className={classes.banner} src={banner[currBanner]} alt="new menu" />
-            <div className={`${classes.right}`} onClick={() => {currBanner < banner.length -1 && setCurrBanner(currBanner + 1)}}><ArrowForwardIos/></div>
             </Grid>
 
             <hr className={classes.hr}/>

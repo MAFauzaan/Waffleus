@@ -6,8 +6,9 @@ export default makeStyles((theme)=> ({
         padding: 0
    },
    heroSection: {
-        display: 'flex',
+        display: 'block',
         textAlign: 'center',
+        minHeight: '650px',
         [theme.breakpoints.up('md')] : {
             padding: '54px 100px 30px'
         },
@@ -19,8 +20,13 @@ export default makeStyles((theme)=> ({
         }
    },
     banner: {
-        maxWidth: '90%',
-        flex: '90%'
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '90%',
+        },
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: '100%',
+        },
+        flex: '100%'
     },
     hr: {
         padding: 0,
@@ -102,7 +108,7 @@ export default makeStyles((theme)=> ({
     },
     
     left: {
-        flex: '5%',
+        float: 'left',
         placeItems: 'center',
         display: 'grid',
         '&:hover': {
@@ -110,7 +116,7 @@ export default makeStyles((theme)=> ({
         }
     },
     right: {
-        flex: '5%',
+        float: 'right',
         placeItems: 'center',
         display: 'grid',
         '&:hover': {
@@ -119,19 +125,22 @@ export default makeStyles((theme)=> ({
     },
     descriptionContainer: {
         backgroundColor: '#fdb84d',
-        transition: '1s'
+        transition: '1s',
+        [theme.breakpoints.down('sm')]: {
+            padding: '60px'
+       }
     },
    croffleDescription: {
        height: '80%',
        width: '80%',
        [theme.breakpoints.down('sm')]: {
             height: '100%',
-            width: '100%'
+            width: '100%',
        }
    },
    croffleName: {
        margin: 0,
-       fontSize: '3.5vw',
+       fontSize: '30px',
        textAlign: 'left'
    },
    hrImg: {
@@ -144,5 +153,8 @@ export default makeStyles((theme)=> ({
    paragraph: {
        fontSize: '24px',
        textAlign: 'left'
-   }
+   },
+    arrow: {
+
+    }
 }))
