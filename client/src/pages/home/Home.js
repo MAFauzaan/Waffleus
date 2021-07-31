@@ -66,7 +66,7 @@ const Home = () => {
 
             <Grid className={classes.deliveryContainer}>
                 <div className={classes.deliveryOptions}>
-                    <img  src={GoFoodLogo} alt="gofood"/>
+                    <img className={classes.gofood} src={GoFoodLogo} alt="gofood"/>
                 </div>
                 <div className={classes.deliveryOptions}>
                     <img className={classes.shopeelogo} src={ShopeeLogo} alt="shopee"/>

@@ -116,8 +116,14 @@ export default makeStyles ((theme) => ({
    shopeelogo: {
        margin: '30px 0',
        [theme.breakpoints.up('xs')] : {
-           width: '30vw',
-           height: '12vw'
+           width: '50%',
+           height: '50%'
+       }
+   },
+   gofood: {
+       [theme.breakpoints.down('xs')]: {
+           height: '30%',
+           width: '30%'
        }
    }
 }))
