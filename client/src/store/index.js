@@ -13,13 +13,11 @@ import storage from 'redux-persist/lib/storage'
 
 import cartSlice from './cartSlice'
 import authSlice from './authSlice'
-import promoSlice from './promo'
 import adminSlice from './adminSlice'
 
 const reducers = combineReducers({
     cart: cartSlice.reducer,
     user: authSlice.reducer,
-    promo: promoSlice.reducer,
     admin: adminSlice.reducer
 })
 

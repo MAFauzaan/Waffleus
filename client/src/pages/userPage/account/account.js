@@ -8,7 +8,7 @@ const Account = (props) => {
     const fetchedUserData = props.user    
     const classes = useStyles();
 
-    const [ userData, setUserData  ] = useState({
+    const [ userData ] = useState({
         username: fetchedUserData.username,
         email: fetchedUserData.email,
         phoneNumber: fetchedUserData.phoneNumber,
