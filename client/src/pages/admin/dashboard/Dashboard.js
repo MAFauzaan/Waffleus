@@ -193,9 +193,6 @@ export default function PermanentDrawerLeft() {
   const logout = async () => {
      dispatch(adminActions.userLogout())
 
-    if(admin.isInitialized === false) {
-      history.push('/admin')
-    }
   }
 
 

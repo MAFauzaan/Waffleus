@@ -34,10 +34,6 @@ const Admin = () => {
                 dispatch(adminActions.userLogin(res.data))
             } 
         })
-
-        if(adminstatus.isInitialized === true) {
-            window.setTimeout(() => {history.push('/admin/dashboard')}, 1500)
-        }
     }
 
 

@@ -1,8 +1,7 @@
 import { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom'
 
-import Admin from '../../pages/admin/login/Admin'
-import Dashboard from '../../pages/admin/dashboard/Dashboard'
+import Admin from '../../pages/admin/Admin'
 
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
@@ -15,10 +14,7 @@ const Layout = (props) => {
                 <Admin />
             </Route>
 
-            <Route path='/admin/dashboard'>
-                <Dashboard />
-            </Route>
-
+        
             <Route path='/'>
                 <Fragment>
                 <Navbar />
