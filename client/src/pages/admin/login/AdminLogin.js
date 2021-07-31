@@ -1,14 +1,12 @@
 import { Container, Paper, TextField, Button } from "@material-ui/core"
 import axios from 'axios'
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { adminActions } from '../../../store/adminSlice'
 
 import useStyles from './AdminStyles'
 
 const Admin = () => {
-    const history = useHistory();
     const classes = useStyles()
 
     const dispatch = useDispatch()

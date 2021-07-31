@@ -1,8 +1,7 @@
 import { Drawer, CssBaseline } from '@material-ui/core'
 import { useEffect, useState } from 'react';
 import { ExpandMore  } from '@material-ui/icons'
-import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router';
+import { useDispatch } from 'react-redux';
 import { adminActions } from '../../../store/adminSlice';
 import axios from 'axios';
 
@@ -23,9 +22,7 @@ import Promo from './dashboard-components/promo/promo';
 
 export default function PermanentDrawerLeft() {
   const classes = useStyles();
-  const admin = useSelector(state => state.admin)
   const dispatch = useDispatch()
-  const history = useHistory()
 
   const [ orderDropdown, setOrderDropdown] = useState(false)
   const [ reportDropdown, setReportDropdown] = useState(false)
