@@ -19,7 +19,8 @@ export default makeStyles((theme)=> ({
         }
    },
     banner: {
-        maxWidth: '100%'
+        maxWidth: '90%',
+        flex: '90%'
     },
     hr: {
         padding: 0,
