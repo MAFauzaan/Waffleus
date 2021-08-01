@@ -115,7 +115,15 @@ export default makeStyles ((theme) => ({
    },
    shopeelogo: {
        margin: '30px 0',
-       [theme.breakpoints.up('xs')] : {
+    [theme.breakpoints.up('lg')] : {
+        width: '40%',
+        height: '50%'
+    },
+    [theme.breakpoints.down('md')] : {
+        width: '50%',
+        height: '50%'
+    },
+       [theme.breakpoints.down('sm')] : {
            width: '50%',
            height: '50%'
        }
