@@ -71,6 +71,9 @@ const Navbar = () => {
     }
 
     const logout = async () => {
+        dispatch(cartActions.logout())
+        dispatch(authActions.userLogout())
+
       await axios.get("http://localhost:4000/logout", {
             withCredentials: true
          }).then((res) => {
@@ -79,8 +82,6 @@ const Navbar = () => {
             }
         })
         
-        dispatch(cartActions.logout())
-        dispatch(authActions.userLogout())
     }
 
     const StyledMenuItem = withStyles((theme) => ({
